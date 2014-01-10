@@ -1,0 +1,15 @@
+{
+    "manifest_version": 1,
+
+    "name": "Time Aware",
+    "description": "Tells you how much time you're spending on various sites",
+    "version": "1.0",
+
+    "permissions": [
+        "tabs"
+    ],
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    }
+}
