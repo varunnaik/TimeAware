@@ -10,6 +10,8 @@
     "default_locale": "en",
     "background": {
         "scripts": [
+            "scripts/storage.js",
+            "scripts/timeaware.js",
             "scripts/background.js"
         ]
     },
