@@ -35,3 +35,8 @@ chrome.windows.onRemoved.addListener(Timeaware.windowClose);
 // Housekeeping: In order to support window-related functions above, we also
 // Need to keep track of whenever a tab is moved between windows
 chrome.tabs.onAttached.addListener(Timeaware.dragTab)
+
+
+// Stop tracking time if the screensaver activates or the user locks screen or
+// hibernates.
+chrome.idle.onStateChanged.addListener(Timeaware.systemIdle)

@@ -18,6 +18,9 @@ Timeaware.watchedDomains = [];
 /* End global conf objects */
 
 
+Timeaware.init = function() {
+
+}
 
 
 /* Timeaware.getTab: Given a tabId, return the index of the tab
@@ -76,6 +79,13 @@ Timeaware.tabNavigate = function(tabId, tabObj) {
     if (tabObj.status !== 'complete') return;
     console.log("Tab navigated! ", tabObj)
 }
+Timeaware.systemIdle = function(eventType) {
+    if (eventType === 'active') {
+
+    } else if (eventType === 'idle') {
+
+    }
+}
 
 Timeaware.dragTab = function(tabId, tabDesc) {
     // When a tab is dragged between windows, update its windowId
@@ -112,4 +122,17 @@ Timeaware.onTabChange = function(tabId, windowId, lostFocus, currentUrl) {
  */
 Timeaware.onWindowChange = function(windowId, lostFocus, activeTabId, activeTabUrl) {
     console.log("LOST FOCUS,", windowId);
+}
+
+Timeaware.tick = function() {
+    // Get the focussed window(s)
+    // Get the active tab for each window
+    // If it is in our list of domains/urls then:
+    // increment its counter.
+    // Update display
+}
+
+Timeaware.updateDisplay = function(windowId, tabId, watchedTabIndex) {
+    // Given a windowId, tabId, watchedTabIndex,
+    // Update the display in that tab
 }
